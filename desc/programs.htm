@@ -1,0 +1,267 @@
+<html>
+  <head>
+    <title>Lars Johansson's C#-sajt: Diverse program</title>
+<META HTTP-EQUIV="Expires" CONTENT="Mon, 01 Jan 1990 01:00:00 GMT">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=iso-8859-1"> 
+  </HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#660000" VLINK="#993300" 
+      ALINK="#FF0000">
+
+<TABLE border="0">
+<TR>
+<TD>
+<IMG border="0" ismap usemap="#titel" src="logo.gif" alt="Lars Johansson's C#-sajt" width="84" height="122"> <MAP name="titel">
+<AREA shape="rect" coords=" 0,5,84,122" href="../index.htm" alt="Lars Johansson's C#-sajt">
+</MAP>
+
+<TD valign="baseline"><A href="classes.htm">Klasser</A> | <A href="components.htm">Komponenter</A> |
+<A href="snippets.htm">Kodsnuttar</A> | <A href="programs.htm">Diverse program</A>
+</TR>
+</TABLE>
+
+<HR>
+<ul> 
+<li> <A href="#TidySharp">TidySharp</A>
+<li> <A href="#SWEgenskaper">SWEgenskaper</A>
+<li> <A href="#BabbelFisken">BabbelFisken</A>
+<li> <A href="#MatteKalkylatorn">MatteKalkylatorn</A>
+<li> <A href="#MatteLab">MatteLab</A>
+</ul>
+
+<!-- ------------------------------------------------ -->
+<HR>
+<b>Allmänt</b>
+</br>
+De flesta av programmen använder projekt eller filer i "utility"-biblioteket Laj. 
+</br></br>
+<ul>
+<li> Sista versionen av Laj kan du ladda hem här: <a href="..\zip\Laj.zip">Laj.zip</a>
+<li> Källoden för Laj finns här: <a href="..\zip\Laj\">Laj</a>
+<li> Samtliga nedanstående program med källkod kan du ladda hem här: <a href="..\zip\Myutils.zip">Myutils.zip</a>
+</ul>
+
+<!-- ------------------------------------------------ -->
+<HR>
+<b><A NAME="TidySharp"></A>TidySharp</b>
+</br></br>
+
+Ett program som kör HTML Tidy i batchmode, samt raderar textfragment i HTML-filer.
+</br></br>
+
+
+<b>Exempel på användning:</b>
+</br></br>
+Antag att du vill radera textfragmentet:
+</br></br>
+<pre>&lt;A HREF="http://www.linkcounter.com/"&gt;</pre>
+<pre>&lt;IMG SRC="http://www.linkcounter.com/images/monitoredby2.gif"</pre>
+<pre>WIDTH=88 HEIGHT=31 ALT="Monitored By LinkCounter" BORDER="0"&gt;&lt;/A&gt;</pre>
+</br>
+
+i alla *.H*-filer som finns i mappen; C:\CSharp\MyUtils\TidySharp\zExeDir
+</br></br>
+Du matar då in följande:
+</br></br>
+
+
+<img src="tidysharp/tidysharp.gif" alt="Bild" border=0></a>
+</br></br>
+
+...och trycker på Clean.
+</br></br>
+
+<b>Programinformation</b>
+<ul> 
+<li> Last modified: 2002-10-21
+<li> Version: 0.42
+<li> Programmets dokumentation: TODO
+<li> Framtidsplaner: Många 
+<li> Keywords: HTML Tidy, Clean, Start an application from a C# program,
+System.Diagnostics.Process, FileName, Arguments, CreateNoWindow, UseShellExecute,
+RedirectStandardOutput, Start, WaitForExit, ReadToEnd, DirectoryWalker, CSharp
+</ul>
+
+<b>Ladda hem</b>
+<ul> 
+<li> Programmet: <a href="..\zip\MyUtils\TidySharp\zExeDir\TidySharp.exe">TidySharp.exe</a>
+<li> Källoden: <a href="..\zip\MyUtils\TidySharp\">TidySharp</a>
+<li> Källoden som zip-fil: <a href="..\zip\MyUtils\TidySharp.zip">TidySharp.zip</a>
+</ul>
+zip-filen innehåller även några testfiler under zExeDir.
+</br></br>
+<b>Ladda hem HTML Tidy</b>
+<ul> 
+<li> <a href="http://tidy.sourceforge.net/">http://tidy.sourceforge.net/</a>
+</ul>
+</br></br>
+
+
+<!-- ------------------------------------------------ -->
+<HR>
+<b><A NAME="SWEgenskaper"></A>SWEgenskaper</b>
+</br></br>
+
+Nyhet i version 0.44: Drag&drop från Utforskaren.
+</br></br>
+
+<b>Varning! Att ändra filändelser mha programmet är livsfarligt!</b>
+</br></br>
+
+Ett program som försöker att ändra attribut, datum, efternamn etc på ett gäng filer. 
+Programmet är skrivet för experter. Nybörjare och barn kan utan tvekan fördärva
+en dator med några musklick.
+</br></br>
+
+Programmet kan köras i två moder...
+</br></br>
+...som ett Windowsprogram:
+</br></br>
+
+<img src="swegenskaper/swegenskaper.gif" alt="Bild" border=0></a>
+</br></br>
+
+...och som ett DOS-program:
+</br></br>
+
+<img src="swegenskaper/swegenskaper_dos.gif" alt="Bild" border=0></a>
+</br></br>
+
+Skriver du exempelvis: 
+</br></br>
+
+SWEgenskaper -t -z- -clm20021001010259 *.txt
+
+</br></br>
+vid DOS-promptern, så får alla txt-filer datumet (clm betyder "alla 3"): 
+2002-10-01 01:02:59. 
+Vidare (-z-) så ändras alla txt-filer till gemena bokstäver. 
+-t betyder att du vill göra detta även i alla "dottermappar".
+</br></br>
+
+<b>Programinformation</b>
+<ul> 
+<li> Last modified: 2002-10-20
+<li> Version: 0.44
+<li> Programmets dokumentation: TODO
+<li> Framtidsplaner: Undo-kommando, Hjälp i Windows 
+<li> Keywords: touch, attrib, Change file name, New extension, capitalization, 
+toupper, to upper, tolower, to lower, tree, command line, windows form, GetConsoleWindow
+</ul>
+
+<b>Ladda hem</b>
+<ul> 
+<li> Programmet: <a href="..\zip\MyUtils\SWEgenskaper\zExeDir\SWEgenskaper.exe">SWEgenskaper.exe</a>
+<li> Källoden: <a href="..\zip\MyUtils\SWEgenskaper\">SWEgenskaper</a>
+<li> Källoden som zip-fil: <a href="..\zip\MyUtils\SWEgenskaper.zip">SWEgenskaper.zip</a>
+</ul>
+zip-filen innehåller även en testhierarki med mappar och filer under zExeDir.
+</br></br>
+
+<!-- ------------------------------------------------ -->
+<HR>
+<b><A NAME="BabbelFisken"></A>BabbelFisken</b>
+</br></br>
+
+Ett program som försöker att översätta diverse källkod till C#. Tyvärr fordras
+det ett "visst" manuellt efterarbete...
+</br></br>
+
+Följande källkod översätts:
+<ul> 
+<li> Delphi
+<li> Turbo Pascal 5 
+<li> VB.NET
+<li> Klassisk VB
+</ul>
+
+...och snart FORTRAN.</br></br>
+
+<img src="babbelfisken/babbelfisken.gif" alt="Bild" border=0></a>
+</br></br>
+
+<b>Programinformation</b>
+<ul> 
+<li> Last modified: 2002-09-16
+<li> Version: 0.53
+<li> Programmets dokumentation: TODO
+<li> Keywords: .NET, dotnet, Delpi to C# converter, VB.NET to C# translator, 
+translate VB6 to C#, convert VB No Option Explicit to C#, TP5 to CSharp,
+Turbo Pascal to C#
+</ul>
+
+<b>Ladda hem</b>
+<ul> 
+<li> Programmet: <a href="..\zip\MyUtils\BabbelFisken\Zexedir.zip">BabbelFisken\Zexedir.zip</a>
+<li> Källoden: <a href="..\zip\MyUtils\BabbelFisken\">BabbelFisken</a>
+<li> Källoden som zip-fil: <a href="..\zip\MyUtils\BabbelFisken.zip">BabbelFisken.zip</a>
+</ul>
+
+<!-- ------------------------------------------------ -->
+<HR>
+<b><A NAME="MatteKalkylatorn"></A>MatteKalkylatorn</b>
+</br></br>
+
+Ett program som utför elementär numerisk analys på formler uppbyggda av elementära funktioner...
+</br></br>
+
+<img src="mattekalkylatorn/mattekalkylatorn_hp.gif" alt="Bild" border=0></a>
+</br></br>
+
+Genom att dubbelklicka på ett "Resultat" kan man ändra antalet decimaler:
+</br></br>
+
+<img src="mattekalkylatorn/mattekalkylatorn_nd.gif" alt="Bild" border=0></a>
+</br></br>
+
+Genom att klicka på "fx" kan man få hjälp med att bygga formler:
+</br></br>
+
+<img src="mattekalkylatorn/mattekalkylatorn_af.gif" alt="Bild" border=0></a>
+</br></br>
+
+<b>Programinformation</b>
+<ul> 
+<li> Last modified: 2002-09-16
+<li> Version: 0.45
+<li> Beskrivning av använda metoder: <a href="mattekalkylatorn/nummetcsharp.htm">Numeriska metoder</a>
+</ul>
+
+<b>Ladda hem</b>
+<ul> 
+<li> Programmet: <a href="..\zip\MyUtils\MatteKalkylatorn\bin\Release\MatteKalkylatorn.exe">MatteKalkylatorn.exe</a>
+<li> Källoden: <a href="..\zip\MyUtils\MatteKalkylatorn\">MatteKalkylatorn</a>
+<li> Källoden som zip-fil: <a href="..\zip\MyUtils\MatteKalkylatorn.zip">MatteKalkylatorn.zip</a>
+</ul>
+
+<!-- ------------------------------------------------ -->
+<HR>
+<b><A NAME="MatteLab"></A>MatteLab</b>
+</br></br>
+Ett bättre Matlab...
+<ul> 
+<li> Kommer om ytterligare några månader...
+</ul>
+
+
+<HR>
+This server is maintained by Lars Johansson <A HREF="MailTo:csharp@telia.com">csharp@telia.com</A> 
+<BR>
+This page was last updated  2002-10-21, 22:46.
+
+<HR>
+<img src="/cgi-bin/Count.cgi?pad=0|dd=E|ft=0|tr=T|trgb=ffffff|df=csharp_programs.dat" alt="">
+
+<!--WEBBOT bot="HTMLMarkup" startspan ALT="Site Meter" -->
+<script type="text/javascript" language="JavaScript">var site="s10kroull"</script>
+<script type="text/javascript" language="JavaScript1.2" src="http://s10.sitemeter.com/js/counter.js?site=s10kroull">
+</script>
+<noscript>
+<a href="http://s10.sitemeter.com/stats.asp?site=s10kroull" target="_top">
+<img src="http://s10.sitemeter.com/meter.asp?site=s10kroull" alt="Site Meter" border=0></a>
+</noscript>
+<!-- Copyright (c)2002 Site Meter -->
+<!--WEBBOT bot="HTMLMarkup" Endspan -->
+
+</body>
+</html>
